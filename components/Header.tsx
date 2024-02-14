@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { Grid2x2, LayoutGrid, Search, ShoppingCart, User } from "lucide-react";
+import { Grid2X2, LayoutGrid, Search, ShoppingCart, User } from "lucide-react";
 import { FormEvent } from "react";
 import { useRouter } from "next/navigation";
 function Header() {
@@ -45,10 +45,8 @@ function Header() {
           href={"/"}
           className="hidden xl:flex text-white font-bold items-center space-x-2 text-sm"
         >
-          <Grid2x2 size={20} />
-          <div>
-            <p>Departments</p>
-          </div>
+          <Grid2X2 size={20} />
+          <p>Departments</p>
         </Link>
 
         <Link
@@ -56,9 +54,7 @@ function Header() {
           className="hidden xl:flex text-white font-bold items-center space-x-2 text-sm"
         >
           <LayoutGrid size={20} />
-          <div>
-            <p>Services</p>
-          </div>
+          <p>Services</p>
         </Link>
 
         <Link
