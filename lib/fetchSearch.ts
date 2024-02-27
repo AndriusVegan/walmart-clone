@@ -1,4 +1,4 @@
-import Result from "postcss/lib/result";
+import { Result } from "@/typings/searchTypings";
 
 function fetchSearch(searchTerm: string) {
   const username = process.env.OXYLABS_USERNAME;

@@ -7,6 +7,7 @@ import { FormEvent } from "react";
 import { useRouter } from "next/navigation";
 import { useCartStore } from "@/store";
 import { getCartTotal } from "@/lib/getCartTotal";
+
 function Header() {
   const router = useRouter();
   const cart = useCartStore((state) => state.cart);
@@ -15,9 +16,10 @@ function Header() {
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const input = e.currentTarget.input.value;
+    router.push(`/search?q=${input}`);
     // input has to match the name parameter of the form
-    router.push(`/search?q={input}`);
   };
+
   return (
     <header className="flex flex-col md:flex-row bg-walmart items-center px-10 py-7 space-x-5">
       <Link href="/" className="mb-5 md:mb-0">
