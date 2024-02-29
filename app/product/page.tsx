@@ -3,7 +3,6 @@ import Image from "next/image";
 import { notFound } from "next/navigation";
 import {
   Carousel,
-  ProductCarousel,
   CarouselContent,
   CarouselItem,
   CarouselNext,
@@ -35,7 +34,7 @@ async function ProductPage({ searchParams: { url } }: Props) {
   return (
     <div className="p-4 lg:p-18 flex flex-col lg:flex-row width-full">
       <div className="hidden lg:inline space-y-4">
-        {product.image.map((image, i) => (
+        {product.images.map((image, i) => (
           <Image
             key={image}
             src={image}
