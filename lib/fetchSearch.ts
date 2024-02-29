@@ -19,7 +19,8 @@ function fetchSearch(searchTerm: string) {
     headers: {
       "Content-Type": "application/json",
       Authorization:
-        "Basic" + Buffer.from(`${username}:${password}`).toString("base64"),
+        "Basic " + Buffer.from(`${username}:${password}`).toString("base64"),
+      // space between Basic and " " importnat , without space won't wok.
     },
     next: {
       revalidate: 60 * 60,
